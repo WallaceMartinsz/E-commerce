@@ -3,91 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho</title>
+    <title>Carrinho de Compras</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS -->
-
-    <!-- Fonts and Icons -->
+    
+    <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css">
+    <link rel="stylesheet" href="styles.css"> 
+    
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo"><img src="image/logo.png" alt="Logo"></a>
-        <ul class="navmenu">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="#">Ofertas</a></li>
-            <li><a href="cart.html">Carrinho</a></li> <!-- Link para a página do carrinho -->
-            
-        </ul>
-        <div class="nav-icon">
-            <a href="#"><i class='bx bx-search'></i></a>
-            <a href="user.html"><i class='bx bx-user'></i></a>
-            <a href="cart.html"><i class='bx bx-cart-alt'></i></a> <!-- Link para a página do carrinho -->
-            <a href="#"><i class='bx bx-cog'></i></a>
-            <a href="#"><i class='bx bx-menu'></i></a>
+
+    <div class="container">
+        
+        <h2 class="cart-header">Meu Carrinho</h2>
+
+        <header>
+            <a href="#" class="logo"><img src="image/logo.png" alt="Logo"></a>
+            <ul class="navmenu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="cart.html">Carrinho</a></li>
+            </ul>
+            <div class="nav-icon">
+                <a href="#"><i class='bx bx-search'></i></a>
+                <a href="user.html"><i class='bx bx-user'></i></a>
+                <a href="cart.html"><i class='bx bx-cart-alt'></i></a>
+                <a href="#"><i class='bx bx-cog'></i></a>
+                <a href="#"><i class='bx bx-menu'></i></a>
+            </div>
+        </header>
+
+        <div class="cart">
+            <h1>Produtos no Carrinho</h1>
+
+            <div class="product">
+                <img src="image/image1.jpg" alt="Produto 1" />
+                <span>Produto 1</span>
+                <span>R$ 100,00</span>
+            </div>
+
+            <div class="product">
+                <img src="image/image2.jpg" alt="Produto 2" />
+                <span>Produto 2</span>
+                <span>R$ 200,00</span>
+            </div>
+
+            <div class="discount">
+                <label for="discount-code">Cupom de desconto:</label>
+                <input type="text" id="discount-code" placeholder="Digite aqui..." />
+                <button class="button">Adicionar</button>
+            </div>
+
+            <div class="total">
+                <p>Subtotal: R$ 300,00</p>
+                <p>Entrega: R$ 20,00</p>
+                <p>Total: R$ 320,00</p>
+            </div>
+
+            <button class="button">Fechar Pedido</button>
         </div>
-       
-    </header>
+    </div>
 
-    <main>
-        <h1>Carrinho de Compras</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Produto</th>
-                    <th>Preço</th>
-                    <th>Quantidade</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Vestido Laranja</td>
-                    <td>R$100</td>
-                    <td>
-                        <input type="number" value="1" min="1">
-                    </td>
-                    <td>
-                        <button>Remover</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Vestido Azul</td>
-                    <td>R$120</td>
-                    <td>
-                        <input type="number" value="1" min="1">
-                    </td>
-                    <td>
-                        <button>Remover</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Vestido Vermelho</td>
-                    <td>R$130</td>
-                    <td>
-                        <input type="number" value="1" min="1">
-                    </td>
-                    <td>
-                        <button>Remover</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="total">
-            <h2>Total: R$350</h2>
-            <button class="checkout">Finalizar Compra</button>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 [Nome da Loja]. Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="java.js"></script>
 </body>
 </html>
