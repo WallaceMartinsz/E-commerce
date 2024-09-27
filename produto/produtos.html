@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Produtos - E-commerce</title>
+    <link rel="stylesheet" href="produto.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo"><img src="../image/logo.png" alt="Logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="search-container">
+            <input type="text" id="filterInput" placeholder="Buscar produtos...">
+        </section>
+        <section class="product-list" id="produtos">
+        </section>
+        <section class="cart-info">
+            <h2>Carrinho</h2>
+            <p id="cartCount">Itens no Carrinho: 0</p>
+            <ul id="cartItems"></ul>
+            <p id="totalPrice">Total: R$ 0.00</p>
+            <button id="finalizePurchase" class="checkout-button">Finalizar Compra</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Confort Beauty. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="produtos.js"></script>
+</body>
+</html>
