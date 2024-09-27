@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Pagamento - E-commerce</title>
+    <link rel="stylesheet" href="pagamento.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+</head>
+<body>
+
+    <main>
+        <h2>Forma de Pagamento</h2>
+        <button type="button" id="backButton" class="payment-button">
+            <i class='bx bx-arrow-back'></i> 
+        </button>
+        <form id="paymentForm">
+            <div class="form-group">
+                <label for="paymentMethod">Método de Pagamento</label>
+                <select id="paymentMethod" required>
+                    <option value="">Selecione</option>
+                    <option value="cartaoCredito">Cartão de Crédito</option>
+                    <option value="cartaoDebito">Cartão de Débito</option>
+                    <option value="pix">Pix</option>
+                    <option value="boleto">Boleto</option>
+                </select>
+            </div>
+
+            <div id="cartaoCredito" class="payment-option" style="display:none;">
+                <h3>Cartão de Crédito</h3>
+                <div class="form-group">
+                    <label for="cardNumber">Número do Cartão</label>
+                    <input type="text" id="cardNumber" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+                </div>
+                <div class="form-group">
+                    <label for="cardExpiration">Data de Validade</label>
+                    <input type="text" id="cardExpiration" placeholder="MM/AA" required>
+                </div>
+                <div class="form-group">
+                    <label for="cardCVC">CVC</label>
+                    <input type="text" id="cardCVC" placeholder="XXX" required>
+                </div>
+            </div>
+
+            <div id="cartaoDebito" class="payment-option" style="display:none;">
+                <h3>Cartão de Débito</h3>
+                <div class="form-group">
+                    <label for="debitCardNumber">Número do Cartão</label>
+                    <input type="text" id="debitCardNumber" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+                </div>
+                <div class="form-group">
+                    <label for="debitCardExpiration">Data de Validade</label>
+                    <input type="text" id="debitCardExpiration" placeholder="MM/AA" required>
+                </div>
+                <div class="form-group">
+                    <label for="debitCardCVC">CVC</label>
+                    <input type="text" id="debitCardCVC" placeholder="XXX" required>
+                </div>
+            </div>
+
+            <div id="pix" class="payment-option" style="display:none;">
+                <h3>Pix</h3>
+                <p>Para pagar com Pix, escaneie o QR code gerado no app do seu banco ou utilize a chave Pix abaixo:</p>
+                <p id="pixKey">chave.pix@example.com</p>
+            </div>
+
+            <div id="boleto" class="payment-option" style="display:none;">
+                <h3>Boleto</h3>
+                <p>Um boleto será gerado e enviado para seu e-mail.</p>
+            </div>
+
+            <button type="submit">Finalizar Pagamento</button>
+        </form>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Confort Beauty. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="pagamento.js"></script>
+</body>
+</html>
